@@ -31,6 +31,7 @@
 
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+  {% comment %}{{ 'boris.scss.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
@@ -311,8 +312,8 @@
                 <ul class="inline-list social-icons">
                   {% if settings.social_twitter_link != blank %}
                     <li>
-                      <a class="icon-fallback-text" href="{{ settings.social_twitter_link }}" title="{{ shop.name }} on Twitter">
-                        <span class="icon icon-twitter" aria-hidden="true"></span>
+                      <a target="_blank" class="icon-fallback-text" href="{{ settings.social_twitter_link }}" title="{{ shop.name }} on Twitter">
+                        <span class="icon icon-twitter"  aria-hidden="true"></span>
                         <span class="fallback-text">Twitter</span>
                       </a>
                     </li>
@@ -423,6 +424,7 @@
         // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
         timber.RightDrawer.open();
       });
+
     </script>
   {% endif %}
 

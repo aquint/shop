@@ -105,7 +105,7 @@ $colorBody: {{ settings.color_body_bg }};
 $colorBorder: {{ settings.color_borders }};
 
 // Nav and dropdown link background
-$colorNav: #f2f2f2;
+$colorNav: #fff;
 $colorNavText: #333;
 
 // Site Footer
@@ -267,6 +267,7 @@ $max: max-width;
 html, body {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -1732,7 +1733,7 @@ label.error {
   #Site Nav and Dropdowns
 ==============================================================================*/
 .nav-bar {
-  background-color: $colorNav;
+  background-color: transparent;
 }
 
 .site-nav {
@@ -2426,3 +2427,64 @@ label.error {
 }
 
 {% endif %} // settings.ajax_cart_enable
+
+
+/*================ Custom Mods ================*/
+.transparent-divider{
+  border-color: rgba(255,255,255,0.2);
+}
+
+#PageContainer{
+  height: 100%;
+  overflow: visible;
+}
+header{
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+
+/** Footer **/
+
+#footer{
+  padding: 25px;
+  background: #3e4645;
+  color: white;
+}
+#footer h5{
+  color: white;
+}
+#footer ul{
+  margin-left: 0;
+}
+#footer li{
+  list-style: none;
+  font-weight: 200;
+}
+#footer .footer-text{
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.5);
+}
+#social-footer i{
+  font-size: 1.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

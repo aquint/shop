@@ -409,10 +409,10 @@
     {{ 'jquery.ba-cond.min.js' | asset_url | script_tag }}
     {{ 'jquery.slitslider.js' | asset_url | script_tag }}
     {{ 'classie.js' | asset_url | script_tag }}
-    {%comment%}
+    
     {{ 'velocity.min.js' | asset_url | script_tag }}
     {{ 'velocity.ui.min.js' | asset_url | script_tag }}
-    {%endcomment%}
+    
     <script>
       $(function() {
       
@@ -545,9 +545,14 @@
     <script>
       jQuery = $;
 
-      $('body').velocity('transition.bounceLeftIn', {
-        duration: 1000
+      $('body').velocity('transition.expandIn', {
+        duration: 1000,
+        "complete": function() {
+          $('body').css("transform", "");    
+        }
       });
+
+      
 
     </script>
 

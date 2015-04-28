@@ -251,83 +251,83 @@
       </main>
 
       <!-- begin site-footer -->
-        <footer id="footer">
-    <hr class="transparent-divider">
-    <div class="grid">
-      <div class="grid__item small--one-quarter large--one-quarter">
-        <h5>Navigation</h5>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            Collections
-          </li>
-          <li>
-            About Us
-          </li>
-          <li>
-            Blog
-          </li>
-        </ul>
-      </div>
-      <div class="grid__item small--one-quarter large--one-quarter">
-        <h5>Theme Help</h5>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            Collections
-          </li>
-          <li>
-            About Us
-          </li>
-          <li>
-            Blog
-          </li>
-        </ul>
-      </div>
-      <div class="grid__item small--one-quarter large--one-quarter">
-        <h5>Contact Us</h5>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            Collections
-          </li>
-          <li>
-            About Us
-          </li>
-          <li>
-            Blog
-          </li>
-        </ul>
-      </div>
-      <div class="grid__item small--one-quarter large--one-quarter">
-        <h5>Social</h5>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            Collections
-          </li>
-          <li>
-            About Us
-          </li>
-          <li>
-            Blog
-          </li>
-        </ul>
-      </div>
-    </div>
-    <hr class="transparent-divider">
-    <div class="row">
-      <span class="footer-text">Powered by Shopify with This Theme</span>
-    </div>
-  </footer>
+      <footer id="footer">
+        <hr class="transparent-divider">
+        <div class="grid">
+          <div class="grid__item small--one-quarter large--one-quarter">
+            <h5>Navigation</h5>
+            <ul>
+              <li>
+                Home
+              </li>
+              <li>
+                Collections
+              </li>
+              <li>
+                About Us
+              </li>
+              <li>
+                Blog
+              </li>
+            </ul>
+          </div>
+          <div class="grid__item small--one-quarter large--one-quarter">
+            <h5>Theme Help</h5>
+            <ul>
+              <li>
+                Home
+              </li>
+              <li>
+                Collections
+              </li>
+              <li>
+                About Us
+              </li>
+              <li>
+                Blog
+              </li>
+            </ul>
+          </div>
+          <div class="grid__item small--one-quarter large--one-quarter">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                Home
+              </li>
+              <li>
+                Collections
+              </li>
+              <li>
+                About Us
+              </li>
+              <li>
+                Blog
+              </li>
+            </ul>
+          </div>
+          <div class="grid__item small--one-quarter large--one-quarter">
+            <h5>Social</h5>
+            <ul>
+              <li>
+                Home
+              </li>
+              <li>
+                Collections
+              </li>
+              <li>
+                About Us
+              </li>
+              <li>
+                Blog
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="transparent-divider">
+        <div class="row">
+          <span class="footer-text">Powered by Shopify with This Theme</span>
+        </div>
+      </footer>
     <!--footer class="site-footer small--text-center" role="contentinfo">
       <div class="wrapper">
         <div class="grid">
@@ -402,89 +402,89 @@
         </div>
       </div>
     </footer -->
-      <!-- //site-footer -->
-    </div>
-    {{ 'fastclick.min.js' | asset_url | script_tag }}
-    {{ 'timber.js' | asset_url | script_tag }}
-    {{ 'jquery.ba-cond.min.js' | asset_url | script_tag }}
-    {{ 'jquery.slitslider.js' | asset_url | script_tag }}
-    {{ 'classie.js' | asset_url | script_tag }}
-    
-    {{ 'velocity.min.js' | asset_url | script_tag }}
-    {{ 'velocity.ui.min.js' | asset_url | script_tag }}
-    
-    <script>
-      $(function() {
-      
-              var Page = (function() {
-      
-                var $navArrows = $( '#nav-arrows' ),
-                $nav = $( '#nav-dots > span' ),
-                slitslider = $( '#slider' ).slitslider( {
-                  onBeforeChange : function( slide, pos ) {
-      
-                    $nav.removeClass( 'nav-dot-current' );
-                    $nav.eq( pos ).addClass( 'nav-dot-current' );
-      
-                  }
-                } ),
-      
-                init = function() {
-      
-                  initEvents();
-      
-                },
-                initEvents = function() {
-      
+    <!-- //site-footer -->
+  </div>
+  {{ 'fastclick.min.js' | asset_url | script_tag }}
+  {{ 'timber.js' | asset_url | script_tag }}
+  {{ 'jquery.ba-cond.min.js' | asset_url | script_tag }}
+  {{ 'jquery.slitslider.js' | asset_url | script_tag }}
+  {{ 'classie.js' | asset_url | script_tag }}
+
+  {{ 'velocity.min.js' | asset_url | script_tag }}
+  {{ 'velocity.ui.min.js' | asset_url | script_tag }}
+
+  <script>
+    $(function() {
+
+      var Page = (function() {
+
+        var $navArrows = $( '#nav-arrows' ),
+        $nav = $( '#nav-dots > span' ),
+        slitslider = $( '#slider' ).slitslider( {
+          onBeforeChange : function( slide, pos ) {
+
+            $nav.removeClass( 'nav-dot-current' );
+            $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+          }
+        } ),
+
+        init = function() {
+
+          initEvents();
+
+        },
+        initEvents = function() {
+
                         // add navigation events
                         $navArrows.children( ':last' ).on( 'click', function() {
-      
+
                           slitslider.next();
                           return false;
-      
+
                         } );
-      
+
                         $navArrows.children( ':first' ).on( 'click', function() {
-      
+
                           slitslider.previous();
                           return false;
-      
+
                         } );
-      
+
                         $nav.each( function( i ) {
-      
+
                           $( this ).on( 'click', function( event ) {
-      
+
                             var $dot = $( this );
                             
                             if( !slitslider.isActive() ) {
-      
+
                               $nav.removeClass( 'nav-dot-current' );
                               $dot.addClass( 'nav-dot-current' );
-      
+
                             }
                             
                             slitslider.jump( i + 1 );
                             return false;
-      
+
                           } );
                           
                         } );
-      
+
                       };
-      
+
                       return { init : init };
-      
+
                     })();
-      
+
                     Page.init();
-      
+
                   /**
                    * Notes: 
                    * 
                    * example how to add items:
                    */
-      
+
                   /*
                   
                   var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
@@ -493,23 +493,23 @@
                   ss.add($items);
       
                   */
-      
+
                 });
-  </script>
+</script>
   {% comment %}
     Template-specific js
     {% endcomment %}
     <script>
-    {% if newHash %}
-    $(function() {
-      timber.updateHash('{{ newHash }}');
-    });
-    {% endif %}
-    {% if resetPassword %}
-    $(function() {
-      timber.resetPasswordSuccess();
-    });
-    {% endif %}
+      {% if newHash %}
+      $(function() {
+        timber.updateHash('{{ newHash }}');
+      });
+      {% endif %}
+      {% if resetPassword %}
+      $(function() {
+        timber.resetPasswordSuccess();
+      });
+      {% endif %}
     </script>
 
   {% comment %}
@@ -522,18 +522,18 @@
       {% include 'ajax-cart-template' %}
       {{ 'ajax-cart.js' | asset_url | script_tag }}
       <script>
-      jQuery(function($) {
-        ajaxCart.init({
-          formSelector: '#AddToCartForm',
-          cartContainer: '#CartContainer',
-          addToCartSelector: '#AddToCart',
-          cartCountSelector: '#CartCount',
-          cartCostSelector: '#CartCost',
-          moneyFormat: {{ shop.money_format | json }}
+        jQuery(function($) {
+          ajaxCart.init({
+            formSelector: '#AddToCartForm',
+            cartContainer: '#CartContainer',
+            addToCartSelector: '#AddToCart',
+            cartCountSelector: '#CartCount',
+            cartCostSelector: '#CartCost',
+            moneyFormat: {{ shop.money_format | json }}
+          });
         });
-      });
 
-      jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
+        jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
         // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
         timber.RightDrawer.open();
       });
@@ -542,19 +542,36 @@
 
       {% endif %}
 
-    <script>
-      jQuery = $;
+      <script>
+        jQuery = $;
 
-      $('body').velocity('transition.expandIn', {
-        duration: 1000,
-        "complete": function() {
-          $('body').css("transform", "");    
-        }
-      });
+        $('body').velocity('transition.expandIn', {
+          duration: 1000,
+          "complete": function() {
+            $('body').css("transform", "");    
+          }
+        });
 
-      
+        var product = $('.grid__item.large--one-third.medium--one-half');
 
-    </script>
+        $.each(product, function( index, value ){
+          $(value).mouseenter(function(){
+            var self = $(this);
+            self.css('position', "relative");
+            self.velocity({ top: '10px' }, { duration: 1000 }); 
+            self.children('p')
+              .css('position', "relative")
+              .velocity({ right: '10px' }, { duration: 1000 }); 
+          });
+          $(value).mouseleave(function(){
+            var self = $(this);
+            self.velocity({ top: '-10px' }, { duration: 500 }); 
+            self.children('p')
+              .velocity({ right: '-10px' }, { duration: 500 }); 
+          });
+        })
+
+      </script>
 
     </body>
     </html>

@@ -382,6 +382,8 @@
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
   {{ 'timber.js' | asset_url | script_tag }}
+  {{ 'velocity.min.js' | asset_url | script_tag }}
+  {{ 'velocity.ui.min.js' | asset_url | script_tag }}
 
   {% comment %}
     Template-specific js
@@ -423,6 +425,12 @@
       jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
         // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
         timber.RightDrawer.open();
+      });
+
+      jQuery = $;
+
+      $('body').velocity('transition.bounceLeftIn', {
+        duration: 1000
       });
 
     </script>
